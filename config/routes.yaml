@@ -1,6 +1,25 @@
 #index:
 #    path: /
 #    controller: App\Controller\DefaultController::index
-app_lucky_number:
-  path: /test/auth
-  controller: App\Controller\AuthController::getListAction
+register:
+  path: /register
+  controller: App\Controller\AuthController::register
+  methods: POST
+
+api_login_check:
+  path: /api/login_check
+  controller: App\Controller\AuthController::getTokenUser
+
+test:
+  path: /api/test
+  controller: App\Controller\ApiController::test
+
+app.swagger_ui:
+  path: /doc
+  methods: GET
+  defaults: { _controller: nelmio_api_doc.controller.swagger_ui }
+
+app.swagger:
+  path: /doc.json
+  methods: GET
+  defaults: { _controller: nelmio_api_doc.controller.swagger }

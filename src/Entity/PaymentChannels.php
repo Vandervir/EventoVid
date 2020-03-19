@@ -6,9 +6,9 @@ use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
  * @ORM\Entity
- * @ORM\Table(name="payment")
+ * @ORM\Table(name="payment_channel")
  */
-class Payment
+class PaymentChannels
 {
     /**
      * @ORM\Column(type="integer")

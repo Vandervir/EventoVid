@@ -6,7 +6,7 @@ use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
  * @ORM\Entity
- * @ORM\Table(name="event_participant")
+ * @ORM\Table(name="order")
  */
 class Order
 {
