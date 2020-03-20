@@ -1,6 +1,7 @@
 #index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
+#  path: /
+#  controller: App\Controller\DefaultController::homeAction
+
 register:
   path: /register
   controller: App\Controller\AuthController::register
