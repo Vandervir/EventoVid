@@ -17,13 +17,36 @@ class Order
      */
     private $id;
 
-    private $userId;
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Event", inversedBy="event")
+     */
+    private $event;
 
-    private $eventId;
-
+    /**
+     * @ORM\Column(type="string")
+     */
     private $status;
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $priceNet;
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $priceGross;
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $vat;
 
+    /**
+     * @ORM\Column(type="text")
+     */
     private $comment;
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\User", inversedBy="users")
+     */
+    private $user;
 
 
     public function __construct()

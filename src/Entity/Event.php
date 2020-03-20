@@ -48,8 +48,8 @@ class Event
     private $participantAmount;
 
 
-
     public function __construct()
     {
     }
+
 }

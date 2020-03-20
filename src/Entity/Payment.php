@@ -17,18 +17,39 @@ class Payment
      */
     private $id;
 
+    /**
+     * @ORM\Column(type="integer")
+     */
     private $orderId;
 
+    /**
+     * @ORM\Column(type="string", length=32)
+     */
     private $externalOrderId;
 
+    /**
+     * @ORM\Column(type="string", length=32)
+     */
     private $status;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
     private $paymentHash;
 
+    /**
+     * @ORM\Column(type="string", length=32)
+     */
     private $paymentChannel;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
     private $amount;
 
+    /**
+     * @ORM\Column(type="text")
+     */
     private $rawData;
 
     public function __construct()

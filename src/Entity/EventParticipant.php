@@ -17,17 +17,63 @@ class EventParticipant
      */
     private $id;
 
-    private $userId;
-
+    /**
+     * @ORM\Column(type="boolean")
+     */
     private $isPaid;
 
+    /**
+     * @ORM\Column(type="boolean")
+     */
     private $isAccepted;
 
+    /**
+     * @ORM\Column(type="text")
+     */
     private $comment;
 
-    private $paymentId;
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Event", inversedBy="event")
+     */
+    private $event;
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\User", inversedBy="users")
+     */
+    private $user;
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Payment", inversedBy="payment")
+     */
+    private $payment;
+
+    public function getEvent(): ?Event
+    {
+        return $this->event;
+    }
+
+    public function setEvent(?Event $event): self
+    {
+        $this->event = $event;
+
+        return $this;
+    }
 
     public function __construct()
     {
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getUser()
+    {
+        return $this->user;
+    }
+
+    /**
+     * @param mixed $user
+     */
+    public function setUser($user): void
+    {
+        $this->user = $user;
     }
 }

@@ -6,6 +6,7 @@ namespace App\Controller;
 use Lexik\Bundle\JWTAuthenticationBundle\Services\JWTTokenManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Security\Core\User\UserInterface;
 
 
@@ -156,5 +157,10 @@ class ApiController extends AbstractController
     public function test()
     {
         return $this->response(['hello']);
+    }
+
+    public function getEvents(Request $request)
+    {
+//        $request->get('')
     }
 }
