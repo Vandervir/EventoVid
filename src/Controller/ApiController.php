@@ -163,4 +163,29 @@ class ApiController extends AbstractController
     {
 //        $request->get('')
     }
+
+    public function getEvent()
+    {
+        
+    }
+
+    public function buyEvent()
+    {
+        
+    }
+
+    public function getUserDashboard()
+    {
+        return $this->response([]);
+    }
+
+    public function getOwnerDashboard()
+    {
+        return $this->response([]);
+    }
+
+    public function getAdminDashboard()
+    {
+        return $this->response([]);
+    }
 }
